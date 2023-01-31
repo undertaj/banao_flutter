@@ -44,7 +44,7 @@ class CardWidget extends StatelessWidget {
                           ),
                           (num == 1) ? const SizedBox(height: 0,) :
                           ( num == 2 ?
-                          const OutlinedButton(onPressed: null, child: Text("Book", style: TextStyle(color: Colors.blue),))
+                          OutlinedButton(onPressed: null, style: OutlinedButton.styleFrom(side: BorderSide(color: Color(0xff598bed))), child: Text("Book", style: TextStyle(color: Colors.blue),),)
                               : const Icon(Icons.lock) ),
                         ],
                       ),

@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           child: Scaffold(),
         ),
         appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(250),
+            preferredSize: const Size.fromHeight(252),
             child: ColoredBox(
               color: const Color(0xffeef3fd),
               child: Padding(
@@ -40,12 +40,12 @@ class MyApp extends StatelessWidget {
                       IconButton(onPressed: null, icon: Icon(CupertinoIcons.chat_bubble_2)),
                       IconButton(onPressed: null, icon: Icon(CupertinoIcons.bell)),
                       ],
-                      backgroundColor: Color(0xffeef3fd),
+                      backgroundColor: const Color(0xffeef3fd),
                       title: null,
                     ),
                     // SizedBox(height: 100,),
-                    Text("Hello Priya!", style: TextStyle(fontSize: 20, color: Color(0xff08090a),)),
-                    Text("What do you wanna learn today?", style: TextStyle(fontSize: 12, color: Color(0xff6d747a)),),
+                    Text("Hello Priya!", style: GoogleFonts.lora(textStyle: const TextStyle(fontSize: 22, color: Color(0xff08090a),))),
+                    const Text("What do you wanna learn today?", style: TextStyle(fontSize: 12, color: Color(0xff6d747a)),),
                     GridView.count(
 
                       mainAxisSpacing: 12,
@@ -121,15 +121,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Color(0xff598bed),
           unselectedLabelStyle: TextStyle(color: Color(0xff6D747A)),
-          fixedColor: Color(0xff6D747A),
+          //fixedColor: Color(0xff6D747A),
           unselectedItemColor: Color(0xff6D747A),
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled),
-                label: "Home",
-
-            ),
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home",),
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.book), label: "Learn"),
             BottomNavigationBarItem(icon: Icon(Icons.grid_view_outlined), label: "Hub"),
             BottomNavigationBarItem(icon: Icon(CupertinoIcons.chat_bubble), label: "Chat"),
