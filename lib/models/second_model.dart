@@ -18,13 +18,13 @@ class SecondModel {
   });
 
   String requestId;
-  List<Item> items;
+  List<Item2> items;
   int count;
   String anyKey;
 
   factory SecondModel.fromJson(Map<String, dynamic> json) => SecondModel(
     requestId: json["requestId"],
-    items: List<Item>.from(json["items"].map((x) => Item.fromJson(x))),
+    items: List<Item2>.from(json["items"].map((x) => Item2.fromJson(x))),
     count: json["count"],
     anyKey: json["anyKey"],
   );
@@ -37,8 +37,8 @@ class SecondModel {
   };
 }
 
-class Item {
-  Item({
+class Item2 {
+  Item2({
     required this.createdAt,
     required this.name,
     required this.duration,
@@ -54,7 +54,7 @@ class Item {
   bool locked;
   String id;
 
-  factory Item.fromJson(Map<String, dynamic> json) => Item(
+  factory Item2.fromJson(Map<String, dynamic> json) => Item2(
     createdAt: DateTime.parse(json["createdAt"]),
     name: json["name"],
     duration: json["duration"],
